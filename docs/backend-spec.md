@@ -128,7 +128,7 @@ Grouped by area. Each line gists the decision; the linked ticket resolution or A
 - Cloudflare R2 committed (free egress ≈ $60/mo heavy ceiling vs ~$443 S3; realistic ~$3–4/mo); Backblaze B2 is the priced S3-compatible fallback.
 - Direct presigned-PUT browser uploads (2 GB single-PUT cap; multipart deferred to [v2-features](v2-features.md)); on-demand presigned GET downloads, 2-day validity; per-env buckets, direction-rooted keys.
 - Workers hold no storage credentials: inputs arrive as presigned GET URLs inside the workflow, outputs are uploaded by the worker agent via per-job presigned PUTs (input URL reused across attempts; output keys per-attempt).
-- The backend's periodic deletion pass owns deletion; R2 lifecycle rules are a safety net (plus day-one abort-incomplete-multipart); re-run-without-reupload = server-side copy from an existing input file id; no content-hash column.
+- The backend's periodic deletion pass owns deletion; R2 lifecycle rules are a safety net (plus day-one abort-incomplete-multipart); re-run-without-reupload = a new job referencing the existing input file id (no object copy — [#7's amendment](https://github.com/Astral100/Scalex/issues/7) and [the API contract](api-contract-v1.md) are the authorities); no content-hash column.
 
 ### Hosting — [#9](https://github.com/Astral100/Scalex/issues/9), [ADR 0008](adr/0008-self-hosted-hetzner-core-services.md), [ADR 0009](adr/0009-k3s-cnpg-runtime-stack.md)
 
