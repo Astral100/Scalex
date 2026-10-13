@@ -6,6 +6,10 @@ Useful features consciously deferred out of v1. Each entry names the feature, wh
 
 At attempt end the worker agent zips the raw log files (ComfyUI, wrapper, agent) and uploads the zip to R2 via one more presigned PUT carried in the dispatch payload — the same mechanism as the output upload. Earns a place by making log history durable and system-neutral: the zip survives telemetry-box loss, outlives the retention window, and re-loads into any future log store. V1 relies on the live attempt-tagged log stream alone (12-month retention on the unbacked-up telemetry box, per ADR 0011) — declined as premature durability at launch scale.
 
+## Output encoding exploration (h265 / NVENC)
+
+Smaller and faster 4K delivery by re-encoding output with h265 — VideoHelperSuite's Video Combine with NVENC, or software h265 — carried over from the POC's milestone 11 ("potential, research needed"). Earns a place by cutting result file sizes (download time and storage cost) at the same visual quality. Needs research plus a worker-image change to install the custom node. V1 ships the stock h264 output path (CRF/bit-depth already parameterized).
+
 ## Multipart / resumable browser uploads
 
 Uploads beyond the 2 GB v1 cap, and resume-after-disconnect for large uploads, need backend-orchestrated multipart presigning (create-multipart, sign each part, complete — R2 requires equal-size parts). V1 uses a single presigned PUT with the 2 GB input cap; a dropped connection restarts the upload. The API contract carries an upload-mechanics discriminator so multipart can be added without breaking v1 clients.
