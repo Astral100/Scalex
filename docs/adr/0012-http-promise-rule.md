@@ -1,6 +1,6 @@
 # HTTP status codes report promise delivery (the promise rule)
 
-Every endpoint promises one thing, and the HTTP status answers exactly one question: **did the endpoint deliver its promise?** Domain findings — even negative ones — are data in a 2xx body; status codes are never used to tunnel them, and 200 is never used to wrap a refusal. Decided while resolving [API contract v1 (#10)](https://github.com/Astral100/SeedVr.Backend/issues/10); every future endpoint grounds its status-code choices on this rule.
+Every endpoint promises one thing, and the HTTP status answers exactly one question: **did the endpoint deliver its promise?** Domain findings — even negative ones — are data in a 2xx body; status codes are never used to tunnel them, and 200 is never used to wrap a refusal. Decided while resolving [API contract v1 (#10)](https://github.com/Astral100/Scalex/issues/10); every future endpoint grounds its status-code choices on this rule.
 
 - **2xx** — the promise was delivered. Whatever the operation *found* rides in the body as data, even when the finding is negative (an invalid uploaded file, a job whose status is Failed).
 - **4xx** — the request cannot be honored as sent: malformed, referencing something that does not exist or is not usable, or conflicting with current state. Always carries a machine-readable, stable `code` the client branches on.

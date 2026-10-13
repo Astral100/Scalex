@@ -1,8 +1,8 @@
 # API Contract v1
 
-The client-facing HTTP contract of the core services: what the frontend (and any future API consumer) sees. Resolved by [API contract v1 (#10)](https://github.com/Astral100/SeedVr.Backend/issues/10).
+The client-facing HTTP contract of the core services: what the frontend (and any future API consumer) sees. Resolved by [API contract v1 (#10)](https://github.com/Astral100/Scalex/issues/10).
 
-**Scope.** This document covers the client-facing surface only. The backend↔worker-agent protocol (both directions) and the worker-internal one are specified with the [worker image (#17)](https://github.com/Astral100/SeedVr.Backend/issues/17). The backend also exposes one webhook receiver for Vast.ai's completion notice (request-id-checked; one of the three completion signals from the job-pipeline design) — its details likewise live with #17.
+**Scope.** This document covers the client-facing surface only. The backend↔worker-agent protocol (both directions) and the worker-internal one are specified with the [worker image (#17)](https://github.com/Astral100/Scalex/issues/17). The backend also exposes one webhook receiver for Vast.ai's completion notice (request-id-checked; one of the three completion signals from the job-pipeline design) — its details likewise live with #17.
 
 This is the authoritative human-first contract. A machine-readable OpenAPI description is generated from the implementation code later, with this document as its acceptance reference — no hand-maintained OpenAPI file exists.
 

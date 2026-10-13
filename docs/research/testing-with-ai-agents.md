@@ -58,7 +58,7 @@ No single authoritative essay says "integration tests with a real database are *
 
 ---
 
-## Assessment for SeedVr.Backend
+## Assessment for Scalex
 
 1. The planned shape — integration-first against real Postgres via Testcontainers, fakes only at external seams — is on the defensible side of every finding here: it avoids the measured agent over-mocking bias (§4.1), matches Anthropic's own "avoid mocks" guidance, and makes the tautological-test failure mode structurally harder, since expected values come from real database behavior rather than the implementation's own output.
 2. The curated important-logic coverage list plays the role of Böckeler's "approved scenarios": a human decides *what* must be proven and freezes the expectations; Claude Code sessions fill in the how. That division survives both the pro-TDD and post-TDD positions.

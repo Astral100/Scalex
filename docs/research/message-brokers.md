@@ -1,4 +1,4 @@
-# Message brokers for job dispatch — feature comparison for the SeedVr core services
+# Message brokers for job dispatch — feature comparison for the Scalex core services
 
 Research for the wayfinder planning effort. All claims cite primary sources: official docs, vendor pricing pages (Azure via the Retail Prices API, since azure.com pages render "$-" without JS), and first-party GitHub repos. Researched 2026-09-05. Hosting-shape prices cross-check [core-services-hosting-prices-2026-09.md](core-services-hosting-prices-2026-09.md).
 

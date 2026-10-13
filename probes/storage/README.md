@@ -1,6 +1,6 @@
 # Worker-side storage flow live probe
 
-Probe harness for wayfinder ticket [#18](https://github.com/Astral100/SeedVr.Backend/issues/18)
+Probe harness for wayfinder ticket [#18](https://github.com/Astral100/Scalex/issues/18)
 (mirrored as POC PLAN.md Milestone 13). Nothing in the chosen no-credentials
 worker storage flow (ADR 0005) has ever run live; this harness runs it once,
 end to end, against a real Vast.ai instance and a real R2 bucket, and records

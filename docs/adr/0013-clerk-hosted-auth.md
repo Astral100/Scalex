@@ -1,6 +1,6 @@
 # Clerk is the identity provider; users are mirrored into our Postgres
 
-Accounts and sign-in are outsourced to [Clerk](https://clerk.com) rather than built into the backend. Decided while resolving [Auth and accounts approach (#11)](https://github.com/Astral100/SeedVr.Backend/issues/11), on the research in [`docs/research/auth-providers.md`](../research/auth-providers.md) (three verified passes: provider survey, bundled-extras check, Clerk availability track record).
+Accounts and sign-in are outsourced to [Clerk](https://clerk.com) rather than built into the backend. Decided while resolving [Auth and accounts approach (#11)](https://github.com/Astral100/Scalex/issues/11), on the research in [`docs/research/auth-providers.md`](../research/auth-providers.md) (three verified passes: provider survey, bundled-extras check, Clerk availability track record).
 
 - **What Clerk carries**: registration and sign-in (e-mail + password and Google), the prebuilt frontend components, bot protection on signup (Cloudflare Turnstile, all plans), verification and password-reset e-mails sent from our own domain with no mail provider of ours, and a user-management dashboard. Open signup from day one.
 - **Plan path**: free Hobby plan first (fixed 7-day sessions), upgraded to Pro (~$25/mo) when 30-day sliding sessions, user bans, or Clerk-branding removal are wanted. No SLA below Enterprise.
