@@ -1,0 +1,141 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{3B8F2E1D-6C4A-4D29-9B7E-51A0C2D8E4F6}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{DCFA53BA-7A44-42BE-A520-2B585160D40B}"
+	ProjectSection(SolutionItems) = preProject
+		docs\api-contract-v1.md = docs\api-contract-v1.md
+		docs\backend-spec.md = docs\backend-spec.md
+		docs\v2-features.md = docs\v2-features.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "adr", "adr", "{1A0AD3BA-7B89-46AF-A373-E917206A4A9E}"
+	ProjectSection(SolutionItems) = preProject
+		docs\adr\0001-frontend-resolves-presets.md = docs\adr\0001-frontend-resolves-presets.md
+		docs\adr\0002-user-facing-vs-machine-fit-parameters.md = docs\adr\0002-user-facing-vs-machine-fit-parameters.md
+		docs\adr\0003-serverless-primary-worker-orchestration.md = docs\adr\0003-serverless-primary-worker-orchestration.md
+		docs\adr\0004-cloudflare-r2-object-storage.md = docs\adr\0004-cloudflare-r2-object-storage.md
+		docs\adr\0005-workers-hold-no-storage-credentials.md = docs\adr\0005-workers-hold-no-storage-credentials.md
+		docs\adr\0006-product-monorepo.md = docs\adr\0006-product-monorepo.md
+		docs\adr\0007-postgres-as-job-queue.md = docs\adr\0007-postgres-as-job-queue.md
+		docs\adr\0008-self-hosted-hetzner-core-services.md = docs\adr\0008-self-hosted-hetzner-core-services.md
+		docs\adr\0009-k3s-cnpg-runtime-stack.md = docs\adr\0009-k3s-cnpg-runtime-stack.md
+		docs\adr\0010-github-actions-opentofu-cicd.md = docs\adr\0010-github-actions-opentofu-cicd.md
+		docs\adr\0011-dedicated-telemetry-box.md = docs\adr\0011-dedicated-telemetry-box.md
+		docs\adr\0012-http-promise-rule.md = docs\adr\0012-http-promise-rule.md
+		docs\adr\0013-clerk-hosted-auth.md = docs\adr\0013-clerk-hosted-auth.md
+		docs\adr\0014-self-managed-worker-pool-primary.md = docs\adr\0014-self-managed-worker-pool-primary.md
+		docs\adr\0015-worker-image-contents-and-distribution.md = docs\adr\0015-worker-image-contents-and-distribution.md
+		docs\adr\0016-provisioner-and-worker-pool-lifecycle.md = docs\adr\0016-provisioner-and-worker-pool-lifecycle.md
+		docs\adr\0017-monorepo-layout-and-solution-structure.md = docs\adr\0017-monorepo-layout-and-solution-structure.md
+		docs\adr\0018-internal-name-scalex-brand-deferred.md = docs\adr\0018-internal-name-scalex-brand-deferred.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "research", "research", "{2B2CFCA6-C55F-49E2-9806-4B547F0BCDAB}"
+	ProjectSection(SolutionItems) = preProject
+		docs\research\auth-providers.md = docs\research\auth-providers.md
+		docs\research\cicd-iac-landscape.md = docs\research\cicd-iac-landscape.md
+		docs\research\core-services-hosting-prices-2026-09.md = docs\research\core-services-hosting-prices-2026-09.md
+		docs\research\core-services-hosting.md = docs\research\core-services-hosting.md
+		docs\research\long-running-jobs-platforms.md = docs\research\long-running-jobs-platforms.md
+		docs\research\message-brokers.md = docs\research\message-brokers.md
+		docs\research\monorepo-layout-conventions.md = docs\research\monorepo-layout-conventions.md
+		docs\research\naming-gtm-economics.md = docs\research\naming-gtm-economics.md
+		docs\research\push-vs-pull-workers.md = docs\research\push-vs-pull-workers.md
+		docs\research\serverless-live-progress.md = docs\research\serverless-live-progress.md
+		docs\research\single-box-runtime-stack.md = docs\research\single-box-runtime-stack.md
+		docs\research\storage-r2.md = docs\research\storage-r2.md
+		docs\research\testing-with-ai-agents.md = docs\research\testing-with-ai-agents.md
+		docs\research\vastai-provisioning-automation.md = docs\research\vastai-provisioning-automation.md
+		docs\research\vastai-serverless.md = docs\research\vastai-serverless.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{8BE572F1-1DAF-4CF0-9DCE-EE00A9EBE527}"
+	ProjectSection(SolutionItems) = preProject
+		infra\README.md = infra\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{F36D6A46-7E78-4951-A246-A7C909CED0F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.Api", "backend\Scalex.Api\Scalex.Api.csproj", "{71393FA5-49D9-4E9C-BF27-CF8A3E9EDBED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.AppCore", "backend\Scalex.AppCore\Scalex.AppCore.csproj", "{2737C416-6B1B-4868-97D4-AF45D908A972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.Dispatcher", "backend\Scalex.Dispatcher\Scalex.Dispatcher.csproj", "{5736DDDF-AD65-40EB-881A-446BABDC4BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.Provisioner", "backend\Scalex.Provisioner\Scalex.Provisioner.csproj", "{A77B853C-DB67-4F82-B56E-3A33E6203744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.Maintenance", "backend\Scalex.Maintenance\Scalex.Maintenance.csproj", "{D1643779-1214-4CA4-8C22-E4C494F556EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.IntegrationTests", "backend\Scalex.IntegrationTests\Scalex.IntegrationTests.csproj", "{2D0180FE-BC80-4ACA-8FFA-DEB658E83CA1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shared", "shared", "{D7670FC6-2256-4EFB-B5E0-044E8FA0B2EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.Contracts", "shared\Scalex.Contracts\Scalex.Contracts.csproj", "{0453FF27-E7F7-4C14-9866-40946FCA0952}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gpu-worker", "gpu-worker", "{65B0BB57-9775-4D86-A005-413BF563526F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scalex.GpuWorker", "gpu-worker\Scalex.GpuWorker\Scalex.GpuWorker.csproj", "{E5977073-E660-4C67-B637-89DA61C5BDCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71393FA5-49D9-4E9C-BF27-CF8A3E9EDBED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71393FA5-49D9-4E9C-BF27-CF8A3E9EDBED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71393FA5-49D9-4E9C-BF27-CF8A3E9EDBED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71393FA5-49D9-4E9C-BF27-CF8A3E9EDBED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2737C416-6B1B-4868-97D4-AF45D908A972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2737C416-6B1B-4868-97D4-AF45D908A972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2737C416-6B1B-4868-97D4-AF45D908A972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2737C416-6B1B-4868-97D4-AF45D908A972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5736DDDF-AD65-40EB-881A-446BABDC4BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5736DDDF-AD65-40EB-881A-446BABDC4BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5736DDDF-AD65-40EB-881A-446BABDC4BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5736DDDF-AD65-40EB-881A-446BABDC4BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A77B853C-DB67-4F82-B56E-3A33E6203744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A77B853C-DB67-4F82-B56E-3A33E6203744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A77B853C-DB67-4F82-B56E-3A33E6203744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A77B853C-DB67-4F82-B56E-3A33E6203744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1643779-1214-4CA4-8C22-E4C494F556EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1643779-1214-4CA4-8C22-E4C494F556EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1643779-1214-4CA4-8C22-E4C494F556EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1643779-1214-4CA4-8C22-E4C494F556EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D0180FE-BC80-4ACA-8FFA-DEB658E83CA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D0180FE-BC80-4ACA-8FFA-DEB658E83CA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D0180FE-BC80-4ACA-8FFA-DEB658E83CA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D0180FE-BC80-4ACA-8FFA-DEB658E83CA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0453FF27-E7F7-4C14-9866-40946FCA0952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0453FF27-E7F7-4C14-9866-40946FCA0952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0453FF27-E7F7-4C14-9866-40946FCA0952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0453FF27-E7F7-4C14-9866-40946FCA0952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5977073-E660-4C67-B637-89DA61C5BDCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5977073-E660-4C67-B637-89DA61C5BDCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5977073-E660-4C67-B637-89DA61C5BDCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5977073-E660-4C67-B637-89DA61C5BDCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71393FA5-49D9-4E9C-BF27-CF8A3E9EDBED} = {F36D6A46-7E78-4951-A246-A7C909CED0F9}
+		{2737C416-6B1B-4868-97D4-AF45D908A972} = {F36D6A46-7E78-4951-A246-A7C909CED0F9}
+		{5736DDDF-AD65-40EB-881A-446BABDC4BE9} = {F36D6A46-7E78-4951-A246-A7C909CED0F9}
+		{A77B853C-DB67-4F82-B56E-3A33E6203744} = {F36D6A46-7E78-4951-A246-A7C909CED0F9}
+		{D1643779-1214-4CA4-8C22-E4C494F556EF} = {F36D6A46-7E78-4951-A246-A7C909CED0F9}
+		{2D0180FE-BC80-4ACA-8FFA-DEB658E83CA1} = {F36D6A46-7E78-4951-A246-A7C909CED0F9}
+		{0453FF27-E7F7-4C14-9866-40946FCA0952} = {D7670FC6-2256-4EFB-B5E0-044E8FA0B2EE}
+		{E5977073-E660-4C67-B637-89DA61C5BDCC} = {65B0BB57-9775-4D86-A005-413BF563526F}
+		{1A0AD3BA-7B89-46AF-A373-E917206A4A9E} = {DCFA53BA-7A44-42BE-A520-2B585160D40B}
+		{2B2CFCA6-C55F-49E2-9806-4B547F0BCDAB} = {DCFA53BA-7A44-42BE-A520-2B585160D40B}
+	EndGlobalSection
+EndGlobal

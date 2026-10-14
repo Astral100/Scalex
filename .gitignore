@@ -1,3 +1,14 @@
+# Visual Studio auto-generates this Azure-tooling file; the project uses no Azure
+.github/copilot-instructions.md
+
+# .NET
+bin/
+obj/
+*.user
+.vs/
+TestResults/
+
+# probes
 probes/storage/probe.env
 probes/storage/.venv/
 probes/storage/out/

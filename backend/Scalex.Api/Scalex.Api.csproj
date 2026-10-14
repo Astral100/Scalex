@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Scalex.AppCore\Scalex.AppCore.csproj" />
+    <ProjectReference Include="..\Scalex.Dispatcher\Scalex.Dispatcher.csproj" />
+    <ProjectReference Include="..\Scalex.Provisioner\Scalex.Provisioner.csproj" />
+    <ProjectReference Include="..\Scalex.Maintenance\Scalex.Maintenance.csproj" />
+    <ProjectReference Include="..\..\shared\Scalex.Contracts\Scalex.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

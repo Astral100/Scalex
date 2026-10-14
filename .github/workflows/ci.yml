@@ -1,0 +1,32 @@
+# Build + test on every push, as information only — never a deploy gate (#14).
+# A red run blocks nothing: no branch protection references this workflow.
+name: CI
+
+# Runs only on pushes that touch code or the build definition — docs,
+# probes, infra and other non-programmatic changes trigger nothing.
+on:
+  push:
+    paths:
+      - "backend/**"
+      - "shared/**"
+      - "gpu-worker/**"
+      - "Scalex.sln"
+      - "Directory.Build.props"
+      - "Directory.Packages.props"
+      - ".github/workflows/**"
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "9.0.x"
+
+      - name: Build
+        run: dotnet build Scalex.sln --configuration Release
+
+      - name: Test
+        run: dotnet test Scalex.sln --configuration Release --no-build --logger "console;verbosity=normal"

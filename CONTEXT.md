@@ -41,6 +41,9 @@ The values a run actually used after the workflow template, request parameters (
 **Core services**:
 The always-on backend deployable — the API plus its background services (dispatcher, recovery checks, periodic deletion pass) — together with its PostgreSQL database. The core services decide and coordinate everything but never handle video bytes, which flow directly between users, object storage, and workers. Everything GPU-side (worker, worker agent, ComfyUI) and the object storage itself are outside them.
 
+**AppCore** (`Scalex.AppCore`):
+The records-and-rules library inside the core services: the entities and their database migrations, the job state machine, the timeout/retry/expiry policies, and the operations shared by more than one trigger. Rules used by several triggers live here; a loop's own scheduling lives with the loop. The API and the background services all act through it.
+
 **Telemetry box**:
 The dedicated server that receives and stores the system's logs and metrics and raises alerts from them. Core services and workers push telemetry to it; it holds no product data, so losing it loses monitoring history but nothing a user owns. It runs nothing besides the observability stack.
 
